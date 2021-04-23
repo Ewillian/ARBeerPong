@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="groundPlane" size="16.000000 16.056437" />
+    <ImageTarget name="AR_Ronflex" size="16.000000 21.333334" />
+    <ImageTarget name="RachelCardB-min" size="10.000000 13.333333" />
+  </Tracking>
+</QCARConfig>
