@@ -6,7 +6,7 @@ public class Shoot : MonoBehaviour
     public Rigidbody projectile;
     public Transform shotPos;
     public float shotForce = 1000f;
-    public float moveSpeed = 10f;
+    public float moveSpeed = 50f;
     GameController gameController;
     Rigidbody shot;
     private bool hasChangedTurn = false;
@@ -46,7 +46,7 @@ public class Shoot : MonoBehaviour
 
             gameController.pingPongBall = shot.gameObject;
 
-            Destroy(shot.gameObject, 3f);
+            Destroy(shot.gameObject, 6f);
 
         }
 
