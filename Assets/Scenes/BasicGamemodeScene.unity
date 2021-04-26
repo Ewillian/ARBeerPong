@@ -2004,7 +2004,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1860540606}
   m_LocalRotation: {x: -0.0005565928, y: -0.99998695, z: 0.0048419847, w: -0.0015525745}
-  m_LocalPosition: {x: 0, y: 14.81, z: 63.09}
+  m_LocalPosition: {x: 0, y: 14.81, z: 47.23}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 561455533}
@@ -2026,7 +2026,7 @@ MonoBehaviour:
   projectile: {fileID: 9180114979975794591, guid: cd3f7d33b38832549b790276d7743d2c,
     type: 3}
   shotPos: {fileID: 561455533}
-  shotForce: 1000
+  shotForce: 800
   moveSpeed: 30
 --- !u!1 &1919548243
 GameObject:
@@ -2398,6 +2398,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sphere
+      objectReference: {fileID: 0}
+    - target: {fileID: 9180114979975794591, guid: cd3f7d33b38832549b790276d7743d2c,
+        type: 3}
+      propertyPath: m_Mass
+      value: 1.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd3f7d33b38832549b790276d7743d2c, type: 3}

@@ -46,7 +46,7 @@ public class Shoot : MonoBehaviour
 
             gameController.pingPongBall = shot.gameObject;
 
-            Destroy(shot.gameObject, 6f);
+            Destroy(shot.gameObject, 8f);
 
         }
 

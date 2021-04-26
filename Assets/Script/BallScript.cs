@@ -19,14 +19,4 @@ public class BallScript : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-
-        rigibody.mass = 0.9f;
-
-        //if (collision.collider.CompareTag("Floor"))
-        //{
-
-        //}
-    }
 }
