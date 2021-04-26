@@ -36,7 +36,7 @@ public class Shoot : MonoBehaviour
         float h = Input.GetAxis("Horizontal") * Time.deltaTime * moveSpeed;
         float v = Input.GetAxis("Vertical") * Time.deltaTime * moveSpeed;
 
-        transform.Translate(new Vector3(h, v, 0f));
+        transform.Translate(new Vector3(h, v, 0f), Space.Self);
 
         if (Input.GetButtonUp("Fire1"))
         {
