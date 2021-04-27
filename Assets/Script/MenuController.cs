@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class MenuController : MonoBehaviour
 {
+
+    public GameObject MainMenu;
+
+    public GameObject GamemodeMenu;
+
+    public GameObject RuleMenu;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +21,10 @@ public class MenuController : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void ButtonPlayOnClick()
+    {
+
     }
 }
