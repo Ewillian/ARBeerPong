@@ -41,4 +41,16 @@ public class MenuController : MonoBehaviour
     {
         SceneManager.LoadScene("BasicGamemodeScene");
     }
+
+    public void ShowRulesMenu()
+    {
+        MainMenu.GetComponent<Animator>().SetTrigger("EventOut");
+        RuleMenu.GetComponent<Animator>().SetTrigger("EventIn");
+    }
+
+    public void LeaveRulesMenu()
+    {
+        RuleMenu.GetComponent<Animator>().SetTrigger("EventOut");
+        MainMenu.GetComponent<Animator>().SetTrigger("EventIn");
+    }
 }
