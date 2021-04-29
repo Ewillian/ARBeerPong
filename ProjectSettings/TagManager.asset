@@ -8,6 +8,9 @@ TagManager:
   - RedBackground
   - ImageTarget
   - Floor
+  - Main Menu
+  - Rule menu
+  - GameModeMenu
   layers:
   - Default
   - TransparentFX
