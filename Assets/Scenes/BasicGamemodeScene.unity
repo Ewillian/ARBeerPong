@@ -1027,6 +1027,8 @@ MonoBehaviour:
   - {fileID: 755566780}
   - {fileID: 1002850561}
   - {fileID: 1588528862}
+  spriteBlue: {fileID: 21300000, guid: beb955dd79fdba34191f172f89cce368, type: 3}
+  spriteRed: {fileID: 21300000, guid: 8b1d0678f08f74442b0a2208e8a6d862, type: 3}
 --- !u!1 &1127207141
 GameObject:
   m_ObjectHideFlags: 0
@@ -2398,6 +2400,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sphere
+      objectReference: {fileID: 0}
+    - target: {fileID: 9180114979975794577, guid: cd3f7d33b38832549b790276d7743d2c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9180114979975794591, guid: cd3f7d33b38832549b790276d7743d2c,
         type: 3}

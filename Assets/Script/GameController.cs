@@ -67,6 +67,12 @@ public class GameController : MonoBehaviour
     /// </summary>
     Image blueImageBackground;
 
+    [SerializeField]
+    Material materialBlue;
+
+    [SerializeField]
+    Material materialRed;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -134,6 +140,7 @@ public class GameController : MonoBehaviour
     {
         if(playerRedScore < MaxScore && playerBlueScore < MaxScore)
         {
+            Debug.Log("Alo");
             turn = !turn;
             SwitchPlayerTurnColor();
             SetActualTurnText();
@@ -202,6 +209,7 @@ public class GameController : MonoBehaviour
             for (int i = 0; i < cups.Length; i++)
             {
                 cups[i].SetActive(cupsPlayerRed[i]);
+                if(cupsPlayerRed[i]) cups[i].transform.GetChild(0).GetComponent<MeshRenderer>().material = materialRed;
             }
         }
         else
@@ -209,6 +217,7 @@ public class GameController : MonoBehaviour
             for (int i = 0; i < cups.Length; i++)
             {
                 cups[i].SetActive(cupsPlayerBlue[i]);
+                if (cupsPlayerBlue[i]) cups[i].transform.GetChild(0).GetComponent<MeshRenderer>().material = materialBlue;
             }
         }
     }

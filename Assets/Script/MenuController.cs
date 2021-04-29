@@ -17,12 +17,6 @@ public class MenuController : MonoBehaviour
     {
         MainMenu = GameObject.FindGameObjectWithTag("Main Menu");
         GamemodeMenu = GameObject.FindGameObjectWithTag("GameModeMenu");
-        RuleMenu = GameObject.FindGameObjectWithTag("Rule menu");
-    }
-
-   void ShowMainMenu()
-    {
-        MainMenu.GetComponent<Animator>().SetBool("Called", true);
     }
 
     public void ShowGamemode()
@@ -40,17 +34,5 @@ public class MenuController : MonoBehaviour
     public void LoadNoMoreCup()
     {
         SceneManager.LoadScene("BasicGamemodeScene");
-    }
-
-    public void ShowRulesMenu()
-    {
-        MainMenu.GetComponent<Animator>().SetTrigger("EventOut");
-        RuleMenu.GetComponent<Animator>().SetTrigger("EventIn");
-    }
-
-    public void LeaveRulesMenu()
-    {
-        RuleMenu.GetComponent<Animator>().SetTrigger("EventOut");
-        MainMenu.GetComponent<Animator>().SetTrigger("EventIn");
     }
 }
