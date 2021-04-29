@@ -8,7 +8,7 @@ public class GameController : MonoBehaviour
 
     private const string BLUE_WINS_TEXT = "Blue wins!";
     private const string RED_WINS_TEXT = "Red wins!";
-    private const string EQUALITY_TEXT = "Egality.";
+    private const string EQUALITY_TEXT = "Equality.";
 
     /// <summary>
     /// Defines the player red score
@@ -104,8 +104,6 @@ public class GameController : MonoBehaviour
 
         redImageBackground = GameObject.FindGameObjectWithTag("RedBackground").GetComponent<Image>();
         blueImageBackground = GameObject.FindGameObjectWithTag("BlueBackground").GetComponent<Image>();
-
-        Win("Oui");
     }
 
     // Update is called once per frame
@@ -148,9 +146,8 @@ public class GameController : MonoBehaviour
 
     public void NextTurn()
     {
-        if(playerRedScore < MaxScore && playerBlueScore < MaxScore)
+        if(playerRedScore <= MaxScore && playerBlueScore <= MaxScore)
         {
-            Debug.Log("Alo");
             turn = !turn;
             SwitchPlayerTurnColor();
             SetActualTurnText();
