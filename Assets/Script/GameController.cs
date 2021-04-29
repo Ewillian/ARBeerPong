@@ -5,6 +5,11 @@ using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
+
+    private const string BLUE_WINS_TEXT = "Blue wins!";
+    private const string RED_WINS_TEXT = "Red wins!";
+    private const string EQUALITY_TEXT = "Egality.";
+
     /// <summary>
     /// Defines the player red score
     /// </summary>
@@ -73,6 +78,9 @@ public class GameController : MonoBehaviour
     [SerializeField]
     Material materialRed;
 
+    public GameObject winPanel;
+    public GameObject winTextObject;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -96,6 +104,8 @@ public class GameController : MonoBehaviour
 
         redImageBackground = GameObject.FindGameObjectWithTag("RedBackground").GetComponent<Image>();
         blueImageBackground = GameObject.FindGameObjectWithTag("BlueBackground").GetComponent<Image>();
+
+        Win("Oui");
     }
 
     // Update is called once per frame
@@ -155,22 +165,27 @@ public class GameController : MonoBehaviour
             if(playerBlueScore == MaxScore && playerRedScore == MaxScore)
             {
                 print("Equality !");
-                Win();
+                Win(EQUALITY_TEXT);
             }
             else if (playerBlueScore == MaxScore)
             {
                 print("Blue Win !");
-                Win();
+                Win(BLUE_WINS_TEXT);
             }
             else if (playerRedScore == MaxScore)
             {
                 print("Red Win !");
-                Win();
+                Win(RED_WINS_TEXT);
             }
         }
     }
 
-    public void Win() { }
+    public void Win(string winString)
+    {
+        winPanel.SetActive(true);
+        Text winText = winTextObject.GetComponent(typeof(Text)) as Text;
+        winText.text = winString;
+    }
 
     public void SetActualTurnText()
     {
@@ -199,7 +214,6 @@ public class GameController : MonoBehaviour
                 }
             }
         }
-
     }
 
     public void LoadCups()
